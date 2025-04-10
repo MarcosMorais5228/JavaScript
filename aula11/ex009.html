@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    Onde você nasceu?<input type="text" name="pais" id="pais">
+    <input type="button" value="Verificar" id="botao">
+    <div id="res">
+
+    </div>
+    <script>
+        botao.addEventListener('click', verif)
+
+        function verif(){
+        var paístxt = document.querySelector('input#pais')
+        var país = (paístxt.value)
+        if (país == 'Brasil'){
+            res.innerHTML = `<p>Vivendo em ${país}. Você é brasileiro</p>`
+        } else {
+            res.innerHTML = `<p>Vivendo em ${país}. Você é estrangeiro</p>`
+        }
+        }
+    </script>
+</body>
+</html>
